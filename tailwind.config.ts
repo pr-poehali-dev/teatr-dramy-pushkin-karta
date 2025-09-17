@@ -62,11 +62,14 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				coral: '#FF6B6B',
-				turquoise: '#4ECDC4',
-				blue: '#45B7D1',
-				yellow: '#FFE66D',
-				darkBlue: '#2C3E50'
+				velvethered: '#8B0000',
+				theatergold: '#FFD700',
+				darkred: '#4A0000',
+				cream: '#F5F5DC',
+				maroon: '#800000',
+				richgold: '#B8860B',
+				ivory: '#FFFFF0',
+				darkbrown: '#2F1B14'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

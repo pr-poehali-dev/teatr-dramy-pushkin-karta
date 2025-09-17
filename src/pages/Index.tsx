@@ -6,70 +6,111 @@ import Icon from "@/components/ui/icon";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-coral/10 via-turquoise/10 to-blue/10">
-      {/* Header */}
-      <header className="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Icon name="Drama" className="text-coral" size={32} />
-              <h1 className="text-2xl font-bold text-darkBlue">Театр Драмы</h1>
+    <div className="min-h-screen bg-gradient-to-b from-darkbrown via-maroon to-darkred text-ivory">
+      {/* Theater Curtains Header */}
+      <div className="relative">
+        <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-velvethered to-darkred opacity-90"></div>
+        <div className="absolute top-0 left-0 w-full h-8 bg-theatergold"></div>
+        <div className="absolute top-8 left-0 w-full h-4 bg-richgold"></div>
+        
+        <header className="relative z-10 bg-velvethered/95 backdrop-blur-sm border-b-4 border-theatergold sticky top-0">
+          <div className="container mx-auto px-4 py-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-3">
+                <div className="text-theatergold">🎭</div>
+                <div>
+                  <h1 className="text-3xl font-bold text-theatergold">ТЕАТР ДРАМЫ</h1>
+                  <p className="text-cream/80 text-sm">Санкт-Петербург</p>
+                </div>
+              </div>
+              <Button className="bg-theatergold hover:bg-richgold text-darkred font-bold shadow-2xl border-2 border-richgold">
+                🎫 КУПИТЬ БИЛЕТ
+              </Button>
             </div>
-            <Button className="bg-coral hover:bg-coral/90 text-white">
-              🛒 Купить билет
-            </Button>
           </div>
-        </div>
-      </header>
+        </header>
+      </div>
 
-      {/* Hero Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto text-center">
+      {/* Grand Theater Stage Hero */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-radial from-velvethered/40 via-darkred/60 to-darkbrown"></div>
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-theatergold/20 to-transparent"></div>
+        
+        {/* Theater Curtain Effect */}
+        <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-velvethered to-transparent opacity-80"></div>
+        <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-velvethered to-transparent opacity-80"></div>
+        
+        <div className="container mx-auto text-center relative z-10">
           <div className="animate-fade-in">
-            <h2 className="text-5xl font-bold text-darkBlue mb-4">
-              🎉 Добро пожаловать в волшебный мир театра!
+            <div className="mb-6">
+              <div className="inline-flex items-center space-x-4 text-6xl">
+                <span>🎭</span>
+                <span className="text-theatergold">✨</span>
+                <span>🎪</span>
+              </div>
+            </div>
+            
+            <h2 className="text-6xl font-bold text-theatergold mb-6 drop-shadow-2xl">
+              Добро пожаловать
             </h2>
-            <p className="text-xl text-blue mb-8 max-w-3xl mx-auto">
-              На нашем ярком баннере – захватывающие сцены из спектаклей и фотографии наших талантливых актеров.
-            </p>
-            <div className="bg-gradient-to-r from-coral to-turquoise text-white p-8 rounded-3xl mb-8 shadow-2xl">
-              <h3 className="text-3xl font-bold mb-4">
-                🌟 "Открой мир театра с Пушкинской картой!"
-              </h3>
+            <h3 className="text-4xl font-bold text-cream mb-8">
+              в волшебный мир театра!
+            </h3>
+            
+            <div className="max-w-4xl mx-auto bg-gradient-to-r from-velvethered/80 via-darkred/70 to-velvethered/80 backdrop-blur-sm border-4 border-theatergold p-8 rounded-none shadow-2xl mb-8">
+              <div className="text-theatergold text-2xl mb-4">🌟 🌟 🌟</div>
+              <h4 className="text-3xl font-bold text-theatergold mb-4">
+                "Открой мир театра с Пушкинской картой!"
+              </h4>
+              <p className="text-cream text-lg">
+                Захватывающие сцены из спектаклей и фотографии наших талантливых актеров
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Pushkin Card Info */}
-      <section className="py-16 px-4 bg-white/50">
-        <div className="container mx-auto">
-          <Card className="max-w-4xl mx-auto shadow-2xl border-0 bg-gradient-to-br from-yellow/20 to-turquoise/20">
-            <CardHeader className="text-center">
-              <CardTitle className="text-3xl text-darkBlue">
+      {/* Ornate Pushkin Card Info */}
+      <section className="py-16 px-4 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-darkbrown via-maroon to-darkbrown opacity-50"></div>
+        <div className="container mx-auto relative z-10">
+          <Card className="max-w-5xl mx-auto bg-gradient-to-br from-velvethered/90 to-darkred/90 border-4 border-theatergold shadow-2xl">
+            <div className="absolute top-0 left-0 w-full h-2 bg-theatergold"></div>
+            <CardHeader className="text-center py-8 bg-gradient-to-r from-transparent via-theatergold/10 to-transparent">
+              <div className="flex justify-center items-center space-x-4 mb-4">
+                <div className="w-16 h-1 bg-theatergold"></div>
+                <span className="text-4xl">👑</span>
+                <div className="w-16 h-1 bg-theatergold"></div>
+              </div>
+              <CardTitle className="text-4xl text-theatergold font-bold">
                 Что такое Пушкинская карта?
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <p className="text-lg text-center">
-                "Пушкинская карта – это уникальная возможность для молодежи от 14 до 22 лет наслаждаться культурой без затрат, получая 1000 рублей на посещение театров и музеев! Узнай, как легко попасть в мир искусства!"
-              </p>
+            <CardContent className="space-y-8 p-8">
+              <div className="text-center bg-cream/10 p-6 rounded border border-theatergold/30">
+                <p className="text-xl text-cream leading-relaxed">
+                  "Пушкинская карта – это уникальная возможность для молодежи от 14 до 22 лет 
+                  наслаждаться культурой без затрат, получая 1000 рублей на посещение театров и музеев! 
+                  Узнай, как легко попасть в мир искусства!"
+                </p>
+              </div>
               
-              <div className="bg-white/70 p-6 rounded-2xl">
-                <h4 className="text-xl font-bold text-darkBlue mb-4">
-                  📝 Как оформить карту (пошаговые рекомендации):
+              <div className="bg-gradient-to-r from-darkred/50 to-velvethered/50 p-8 border-l-8 border-theatergold">
+                <h4 className="text-2xl font-bold text-theatergold mb-6 flex items-center">
+                  <span className="mr-3">📜</span>
+                  Как оформить карту:
                 </h4>
-                <div className="space-y-4">
+                <div className="space-y-6">
                   {[
                     "Зайди на сайт Госуслуги или скачай приложение Почта Банк",
                     "Заполни заявку, указав свои данные",
                     "Жди подтверждения! Карту можно забрать в удобном для тебя месте"
                   ].map((step, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <Badge className="bg-coral text-white w-8 h-8 rounded-full flex items-center justify-center">
+                    <div key={index} className="flex items-center space-x-4">
+                      <Badge className="bg-theatergold text-darkred w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">
                         {index + 1}
                       </Badge>
-                      <p className="text-darkBlue">{step}</p>
+                      <p className="text-cream text-lg">{step}</p>
                     </div>
                   ))}
                 </div>
